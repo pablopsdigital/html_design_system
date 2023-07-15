@@ -2,6 +2,15 @@ import { createButton } from "./button";
 
 export default {
   title: "HTML Design System/Atoms/Button",
+  decorators: [
+    (story) => {
+      const decorator = document.createElement("div");
+      decorator.style.margin = "24px";
+      decorator.appendChild(story());
+      return decorator;
+    },
+  ],
+  tags: ["autodocs"],
   argTypes: {
     label: {
       name: "label",
