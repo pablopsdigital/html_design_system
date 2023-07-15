@@ -10,6 +10,24 @@ export default {
       return decorator;
     },
   ],
+  parameters: {
+    actions: {
+      handles: ["mouseover", "click .btn"],
+    },
+    backgrounds: {
+      default: "default",
+      values: [
+        {
+          name: "default",
+          value: "#FFFFFF",
+        },
+        {
+          name: "blackfriday",
+          value: "#000000",
+        },
+      ],
+    },
+  },
   tags: ["autodocs"],
   argTypes: {
     label: {
@@ -31,6 +49,10 @@ export default {
       control: {
         type: "radio",
       },
+    },
+    onClick: {
+      description: "Event",
+      action: "clicked",
     },
   },
 };
